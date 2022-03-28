@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "browser-sync": "^2.27.9",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.43",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.1.0"
+  }
+}
