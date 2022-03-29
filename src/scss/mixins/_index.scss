@@ -1,1 +1,41 @@
 
+%line-text{
+    font-size:0.85rem;
+    position: relative;
+    display:flex;
+    align-items:center;
+    &::before{
+        content:'';
+        height:2px;
+        width:2rem;
+        background:#000;
+        margin:0 .3rem;
+    }
+}
+
+// Headings
+
+%heading-1{
+    font-size:1.75rem;
+    font-weight:700;
+}
+
+%heading-2{
+    font-size:1.12rem;
+    font-weight:500;
+}
+
+
+// Text
+
+%text-1{
+    font-weight:500;
+    font-size:1.1rem;
+    line-height:1.22;
+}
+
+
+
+%container-width{
+    max-width: 88%;
+}

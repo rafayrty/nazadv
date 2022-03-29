@@ -1,0 +1,32 @@
+.container-header {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+
+        a {
+            display: block;
+            background: $primary;
+            padding: 1.1rem .8rem;
+
+            svg {
+                display: block;
+            }
+        }
+
+    }
+
+    .menu-icon {
+        a {
+            display: block;
+            background: $primary;
+            padding: 1.1rem 1.2rem;
+
+            svg {
+                display: block;
+            }
+        }
+
+    }
+
+}

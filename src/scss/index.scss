@@ -1,4 +1,20 @@
-@import 'mixins';
 @import 'variables';
+@import 'mixins';
 @import 'normalize.css';  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
+
+/* Components */
+@import 'components/header.scss';
+
+
+/* Pages */
+@import 'pages/home.scss';
+
+body{
+    overflow-x: hidden;
+}
+*{
+    font-family:'Montserrat',sans-serif;
+    box-sizing: border-box;
+}
