@@ -1,0 +1,23 @@
+footer{
+    .footer-container{
+        background:$primary;
+        overflow: hidden;
+        max-width:96%;
+        margin-top:5.5rem;
+        .footer-inner-container{
+            padding:3rem 1.1rem;
+        }
+
+        .website-review{
+            color:#FFF;
+            p,h6{
+                margin:0;
+            }
+            h6{
+               @extend %heading-3;
+               margin-top:2rem;
+               margin-bottom:.25rem;
+            }
+        }
+    }
+}

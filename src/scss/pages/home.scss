@@ -27,7 +27,7 @@
         position: absolute;
         transform: rotate(90deg);
         right: -2.9rem;
-        bottom: 0;
+        bottom: 8%;
         padding: 0rem 1.6rem;
 
         p {
@@ -47,7 +47,7 @@
     }
 
     .hero-img {
-        padding-top: 45%;
+        padding-top:60%;
 
         .mob-work {
             display: grid;
@@ -179,6 +179,76 @@
                     margin-top:3rem;
                 }
             }
+        }
+    }
+
+}
+
+.contact{
+    .contact-container{
+        @extend %container-width;
+        margin:0 auto;
+        margin-top:6.4rem;
+        h6{
+            @extend %line-text;
+        }
+        h1{
+            @extend %heading-1;
+        }
+        &__text{
+            @extend %text-1;
+        }
+
+        form{
+            margin-top:3.8rem;
+            .form-group{
+                .input{
+                    @extend %input-1;
+                }
+                &:not(:first-child){
+                    margin-top:1.3rem;
+                }
+
+                label{
+                    @extend %text-2;
+                }
+                select{
+                    @extend %select-1;
+                    margin-top:.5rem;
+                }
+                textarea{
+                    @extend %input-1;
+                }
+           
+            }
+
+            .checkbox-group{
+                margin-top:2.5rem;
+                margin-bottom:2.8rem;
+                p{
+                    @extend %text-2;
+                    margin-bottom:1.8rem;
+                }
+                .checkbox{
+                    @extend %text-2;
+                    display:flex;
+                    align-items: center;
+                    margin-top:1.1rem;
+                    .input-checkbox{
+                        padding:.5rem;
+                        height:16px;
+                        width:16px;
+                        margin-right:1rem;
+                    }
+                }
+            }
+            .submit-btn-container{
+                text-align: center;
+                .submit-btn{
+                    @extend %button-1;
+                }
+            }
+            
         }
     }
 }
