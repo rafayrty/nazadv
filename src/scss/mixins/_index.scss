@@ -44,6 +44,13 @@
     line-height:1.12;
 }
 
+%text-3{
+    font-weight:500;
+    font-size:.85rem;
+    line-height:1.12;
+}
+
+
 
 // Input
 
@@ -71,6 +78,14 @@
 %button-1{
     color:#FFF;
     background:$primary;
+    border:none;
+    padding:.8rem 2.8rem;
+    margin-top:4rem;
+}
+
+%button-2{
+    color:$primary;
+    background:#FFF;
     border:none;
     padding:.8rem 2.8rem;
     margin-top:4rem;
