@@ -48,7 +48,7 @@
 
     <div class="second-container">
 
-        <div class="hero-img hero-container">
+        <div class="hero-img">
 
             <div class="mob-work">
                 <p>Looking for a partner to support you in digital design?<br /></p>
@@ -94,11 +94,16 @@
 
     <div class="our-services-container">
 
+   
+        <div class="services-main-container">
+ 
+
+        <div class="start">
         <h6>Our Services</h6>
 
-        <h1>
-            Quality & expertise.
-        </h1>
+<h1>
+    Quality & expertise.
+</h1>
 
 
         <p class="our-services-container__text">
@@ -110,6 +115,11 @@
         </p>
 
         <a href="#" id="discover">Discover More</a>
+
+        </div>
+
+
+        <div class="end">
 
 
         <div class="services-list">
@@ -167,6 +177,10 @@
                     <p>logo Design, Visual identity, Brand strategy and more....</p>
                 </div>
             </div>
+        </div>
+       
+    </div>
+
         </div>
 
     </div>

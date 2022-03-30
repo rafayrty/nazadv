@@ -4,6 +4,7 @@
     position: relative;
     display:flex;
     align-items:center;
+    font-weight:600;
     &::before{
         content:'';
         height:2px;
@@ -18,6 +19,10 @@
 %heading-1{
     font-size:1.75rem;
     font-weight:700;
+
+    @include media(">=desktop"){
+        font-size:2.6rem;
+    }
 }
 
 %heading-2{
@@ -36,6 +41,12 @@
     font-weight:500;
     font-size:1.1rem;
     line-height:1.22;
+
+    @include media(">=desktop"){
+
+        font-size:1.22rem;
+
+    }
 }
 
 %text-2{
@@ -80,7 +91,6 @@
     background:$primary;
     border:none;
     padding:.8rem 2.8rem;
-    margin-top:4rem;
 }
 
 %button-2{
@@ -88,9 +98,11 @@
     background:#FFF;
     border:none;
     padding:.8rem 2.8rem;
-    margin-top:4rem;
 }
 
 %container-width{
     max-width: 88%;
+    @include media(">=desktop"){
+        max-width:91%;
+    }
 }

@@ -7,6 +7,17 @@ footer{
         .footer-inner-container{
             padding:3rem 1.1rem;
             padding-bottom:1.6rem;
+            @include media(">=desktop"){
+                padding-top:5rem;
+                padding-left:5%;
+            }
+            .footer-top{
+                @include media(">=desktop"){
+                    display:grid;
+                    grid-template-columns: .5fr 1.1fr;
+                    align-items: center;
+                }
+            }
         }
 
         .website-review{
@@ -18,10 +29,22 @@ footer{
                @extend %heading-3;
                margin-top:2rem;
                margin-bottom:.25rem;
+               @include media(">=desktop"){
+                margin-top:0;
+               }
+            }
+            @include media(">=desktop"){
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
             }
             form{
+              
                 margin-top:2rem;
-
+                @include media(">=desktop"){
+                    margin-top:0;
+                    display:flex;
+                }
                 .input{
                     @extend %input-1;
                     color:#FFF;
@@ -39,8 +62,29 @@ footer{
 
                     .submit-btn{
                         @extend %button-2;
+                        text-transform: uppercase;
+                        background:#F1F5F9;
+                        margin-top:3rem;
+                        @include media(">=desktop"){
+                            height:100%;
+                            margin-left:1rem;
+                            font-weight:700;
+                            margin-top:0;
+                        }
         
                     }
+                }
+            }
+
+        }
+        .footer-bottom{
+            @include media(">=desktop"){
+                display:grid;
+                grid-template-columns: 3.6fr 1fr;
+
+                .addresses{
+                    display:flex;
+                    justify-content: space-between;;
                 }
             }
 
@@ -68,6 +112,9 @@ footer{
                 }
                 &:not(:first-child){
                     margin-top:3rem;
+                    @include media(">=desktop"){
+                        margin-top:0;
+                    }
                 }
             }
         }
@@ -77,6 +124,9 @@ footer{
                 padding:0;
                 margin-top:3rem;
                 // border-bottom:1px solid #FFF;
+                @include media(">=desktop"){
+                    margin-top:0;
+                }
                 li{
                     list-style: none;
 
@@ -120,6 +170,10 @@ footer{
             p{
                 margin:0;
                 margin-top:3rem;
+            }
+            @include media(">=desktop"){
+                padding-left:5%;
+                padding-bottom:2.8rem;
             }
         }
     }

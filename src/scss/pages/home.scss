@@ -1,25 +1,48 @@
 .hero {
-
     // padding-bottom: 50%;
     .hero-container {
+        height:100vh;
         @extend %container-width;
         margin: 0 auto;
+        @include media('>=desktop'){
+            height:auto;
+        }
+    }
+
+    @include media('>=desktop'){
+
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:3rem;
+        align-items: center;
+        padding-left:5%;
     }
 
     h6 {
-        margin-top: 6rem;
+        padding-top: 8.6rem;
+        margin-top:0;
         margin-bottom: 2rem;
         @extend %line-text;
+
+        @include media('>=desktop'){
+
+            padding-top:9.6rem;
+        }
     }
 
     h1 {
         margin-top: 3.6rem;
         @extend %heading-1;
-
+        @include media('>=desktop'){
+            margin-bottom:.6rem;
+        }
     }
 
-    p {
+    .hero-container p {
         @extend %text-1;
+        @include media('>=desktop'){
+            margin-top:0rem;
+        }
     }
 
     .more {
@@ -27,9 +50,13 @@
         position: absolute;
         transform: rotate(90deg);
         right: -2.9rem;
-        bottom: 8%;
+        bottom: 10%;
         padding: 0rem 1.6rem;
-
+        @include media('>=desktop'){
+            left:-2.9rem;
+            right:auto;
+            bottom:0;
+        }
         p {
             color: #FFF;
             display: flex;
@@ -45,41 +72,61 @@
             }
         }
     }
+    .second-container{
+        @extend %container-width;
+        margin:0 auto;
+        @include media('>=desktop'){
+            margin:0;
+            max-width:100%;
+        }
+        .hero-img {
+            .mob-work {
+                display: grid;
+                grid-template-columns: .7fr .4fr;
+                @include media('>=desktop'){
+                    display:none;
+                }
+                p {
+                    font-weight: 400;
+                    font-size: .85rem;
+                }
 
-    .hero-img {
-        padding-top:60%;
-
-        .mob-work {
-            display: grid;
-            grid-template-columns: .7fr .4fr;
-
-            p {
-                font-weight: 400;
-                font-size: .85rem;
+                b {
+                    @extend %line-text;
+                }
             }
 
-            b {
-                @extend %line-text;
-            }
+
         }
 
+        
+        .img-container {
+            // max-width: 94%;
+            // margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            @include media('>=desktop'){
+                margin-right:0;
+            }
+            img {
+                width:100%;
+                margin-top: 1rem;
+                padding-right:4rem;
+            }
+    
+        }
 
+     
 
     }
 
-    .img-container {
-        max-width: 94%;
-        margin-left: auto;
 
-        img {
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-    }
+  
 }
 
 .our-works {
+    @include media(">=desktop"){
+        padding-top:5%;
+    }
     &-container {
         @extend %container-width;
         margin: 0 auto;
@@ -110,9 +157,15 @@
         padding-bottom:3rem;
         padding-left:1.2rem;
         padding-right:1.2rem;
-
+        @include media('>=desktop'){
+            padding-left:5%;
+        }
         h6{
             @extend %line-text;
+            
+            @include media('>=desktop'){
+                margin-top:0;
+            }
         }
         h1{
             @extend %heading-1;
@@ -120,7 +173,13 @@
         &__text{
             @extend %text-1;
         }
-
+        @include media('>=desktop'){
+            .services-main-container{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap:2rem;
+            }
+        }
         #discover{
             display:inline-block;
             margin-top:1rem;
@@ -167,6 +226,9 @@
 
         .services-list{
             margin-top:5rem;
+            @include media('>=desktop'){
+                margin-top:0;
+            }
             .services-list__item{
                 &-heading{
                     h3{
@@ -177,6 +239,7 @@
 
                 &:not(:first-child){
                     margin-top:3rem;
+                    
                 }
             }
         }
@@ -198,9 +261,18 @@
         &__text{
             @extend %text-1;
         }
+        @include media('>=desktop'){
+            &__text{
+                max-width:40%;
+            }
+        }
 
         form{
             margin-top:3.8rem;
+            @include media('>=desktop'){
+                max-width:60%;
+                margin:0 auto;
+            }
             .form-group{
                 .input{
                     @extend %input-1;
@@ -246,6 +318,11 @@
                 text-align: center;
                 .submit-btn{
                     @extend %button-1;
+                    margin-top:4rem;
+
+                    @include media(">=desktop"){
+                        margin-top:2rem;
+                    }
                 }
             }
             

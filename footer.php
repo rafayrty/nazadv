@@ -4,7 +4,8 @@
     
     <div class="footer-inner-container">    
         
-    
+    <div class="footer-top">
+
     <div class="logo">
     <a href="#">
 <svg width="159" height="28" viewBox="0 0 159 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,8 +29,11 @@
 
 
         <div class="website-review">
+            <div class="website-review-text">
             <h6>Get Your Website Review</h6>
             <p>A free, comprehensive report</p>
+
+            </div>
 
             <form action="">
                 <div class="form-group">
@@ -40,6 +44,10 @@
                 </div>
             </form>
         </div>
+
+        </div>
+
+<div class="footer-bottom">
 
         <div class="addresses">
 
@@ -72,6 +80,8 @@
 </div>
 
 </div>
+
+<div class="footer-third">
 
 <div class="footer-menu">
     <ul>
@@ -110,16 +120,20 @@
 </li>
     </ul>
 </div>
+</div>
 
 
         </div>
+
+        </div>
+
+
+    </div>
 
     <div class="credits">
         <p>@ 2021 NAZADV. All right reserved</p>
     </div>
 
-
-    </div>
  
 </div>
   
