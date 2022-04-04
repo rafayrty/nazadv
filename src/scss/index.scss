@@ -8,10 +8,14 @@
 /* Components */
 @import 'components/header.scss';
 @import 'components/footer.scss';
-
+ 
 
 /* Pages */
 @import 'pages/home.scss';
+@import 'pages/services.scss';
+@import 'pages/about.scss';
+@import 'pages/portfolio.scss';
+@import 'pages/contact.scss';
 
 body{
     overflow-x: hidden;
@@ -19,4 +23,8 @@ body{
 *{
     font-family:'Montserrat',sans-serif;
     box-sizing: border-box;
+}
+
+main{
+    margin-bottom:4rem;
 }

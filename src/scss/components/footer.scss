@@ -3,7 +3,7 @@ footer{
         background:$primary;
         overflow: hidden;
         max-width:96%;
-        margin-top:5.5rem;
+        // margin-top:5.5rem;
         .footer-inner-container{
             padding:3rem 1.1rem;
             padding-bottom:1.6rem;
@@ -49,12 +49,15 @@ footer{
                     @extend %input-1;
                     color:#FFF;
                     border-bottom:1px solid #FFF;
+                    transition:.2s ease-in-out;
+                    position:relative;
                     &::placeholder{
                         color:#FFF;
                         opacity:1;
                     }
+            
                     &:focus{
-                        border-bottom:2px solid #FFF;
+                        border-bottom:1px solid $blue;
                     }
                 }
                 .submit-btn-container{
@@ -146,7 +149,7 @@ footer{
                 }
             }
         }
-        .footer-socials{
+        .footer-socials{       
             margin-top:2rem;
             p{
                 @extend %text-3;

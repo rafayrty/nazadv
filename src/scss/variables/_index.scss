@@ -2,3 +2,13 @@
 // Colors
 $primary: #343466;
 $light:#F1F5F9;
+$blue:#53C9EE;
+
+
+//Width
+$container:88%;
+$container_fluid:94%;
+@include media(">=desktop"){
+$container:91%;
+$container_fluid:94.6%;
+}
