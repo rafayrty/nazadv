@@ -1,26 +1,39 @@
 import ServicesSlider from './services';
+import HomeSlider from './home';
 
 export default class Sliders {
   constructor() {
-    this.ServiceSlider = new ServicesSlider();
-
-    this.sliderEvents();
+    if (document.querySelector('.services-page')) {
+      this.serviceSlider = new ServicesSlider();
+      this.servicesSliderEvents();
+    }
+    if (document.querySelector('.home-page')) {
+      this.homeSlider = new HomeSlider();
+      this.homeSliderEvents();
+    }
   }
 
-  sliderEvents() {
+  servicesSliderEvents() {
     document.querySelector('.main-slider-1 .slide-next').addEventListener('click', () => {
-      this.ServiceSlider.slideNext(0);
+      this.serviceSlider.slideNext(0);
     });
     document.querySelector('.main-slider-2 .slide-next').addEventListener('click', () => {
-      this.ServiceSlider.slideNext(1);
+      this.serviceSlider.slideNext(1);
     });
 
     document.querySelector('.main-slider-3 .slide-next').addEventListener('click', () => {
-      this.ServiceSlider.slideNext(2);
+      this.serviceSlider.slideNext(2);
     });
 
     document.querySelector('.main-slider-4 .slide-next').addEventListener('click', () => {
-      this.ServiceSlider.slideNext(3);
+      this.serviceSlider.slideNext(3);
+    });
+  }
+
+  homeSliderEvents() {
+    document.querySelector('.our-works .slide-next').addEventListener('click', () => {
+      this.homeSlider.slideNext();
+      console.log('hey');
     });
   }
 }

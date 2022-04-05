@@ -2,7 +2,7 @@
 
 <?php get_header()?>
 
-<main>
+<main class="services-page">
 
 <div class="hero hero-services">
     <div class="hero-container">
@@ -82,7 +82,7 @@
             <p>
             Web development is a mystery to some and a real challenge to do well.<br/>
             After years of honing our abilities with the world's leading front-end & back-end technologies (VueJS, React, WordPress, Magento, Headless CMS, GreenSock and more), our expert team will manage all the nuances to build a high-performance web presence for your brand.<br/>
-            Whether it’s consulting or taking the lead on your development project, Rise’s professionalism gives you the confidence to excel.
+            Whether it's consulting or taking the lead on your development project, Rise’s professionalism gives you the confidence to excel.
             </p>
             <ul>
                 <li>Digital product design</li>

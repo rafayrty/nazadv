@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-
+<main class="home-page">
 <div class="hero">
 
     <div class="hero-container">
@@ -73,6 +73,8 @@
     <div class="our-works-container">
 
 
+    <div class="our-works-text-content">
+
         <h6>Our Works</h6>
 
         <h1>
@@ -83,6 +85,72 @@
             Clients choose Nazadv as their digital partner to boost brand visibility, growth and sales. Here’s some of
             our best work.
         </p>
+
+        <div class="project-info">
+            <h2>Regus</h2>
+
+            <p>
+            Landing page of the centre branch for new targeted audiences
+            </p>
+            <h4>Our Role</h4>
+            <ul>
+                <li>- UX/UI Design</li>
+                <li>- Web Development</li>
+                <li>- Web Design</li>
+
+            </ul>
+            <a href="#">View Project</a>
+        </div>
+        </div>
+
+
+        <div class="works-slider">
+        <div class="desk-work">
+                <p>Looking for a partner to support you in digital design?<br /></p>
+                <b>Let's Chat</b>
+            </div>
+            <div class="swiper home-slider">
+                    <!-- Additional required wrapper -->
+               
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="main-service-slider-image">
+                                <img src="<?= get_template_directory_uri() ?>/dist/assets/images/slide1.jpg">
+                            </div>
+                        </div>
+                        <div class="swiper-slide"> 
+                            <div class="main-service-slider-image">
+                                <img src="<?= get_template_directory_uri() ?>/dist/assets/images/slide2.jpg">
+                            </div>
+                        </div>
+                 
+                    </div>
+
+                    </div>
+
+                    <div class="slide-bottom">
+                        <div class="slide-progress">
+                            <p class="current-slide">01</p>
+                            <b> <span class="progress"></span></b>
+                            <p class="count">05</p>
+                        </div>
+                        <a href="#">
+                        VIEW ALL PROJECTS
+                        </a>
+                    </div>
+        </div>
+
+        <div class="slide-counter">
+                        01
+                    </div>
+                    <div class="slide-next">
+
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                    </div>
 
     </div>
 
@@ -188,5 +256,5 @@
 </div>
 
 <?php require 'template-parts/form.php' ?>
-
+</main>
 <?php get_footer(); ?>

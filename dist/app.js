@@ -233,6 +233,58 @@ var Navigation = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/js/sliders/home.js":
+/*!********************************!*\
+  !*** ./src/js/sliders/home.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ HomeSlider)
+/* harmony export */ });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.min.css");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+ // eslint-disable-next-line import/no-unresolved
+
+
+
+var HomeSlider = /*#__PURE__*/function () {
+  function HomeSlider() {
+    _classCallCheck(this, HomeSlider);
+
+    var numOfSlides = 0;
+    this.swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.home-slider', {
+      // configure Swiper to use modules
+      loop: true,
+      on: {
+        beforeInit: function beforeInit() {
+          numOfSlides = document.querySelectorAll('.home-slider .swiper-slide').length;
+        }
+      }
+    });
+  }
+
+  _createClass(HomeSlider, [{
+    key: "slideNext",
+    value: function slideNext() {
+      this.swiper.slideNext();
+    }
+  }]);
+
+  return HomeSlider;
+}();
+
+
+
+/***/ }),
+
 /***/ "./src/js/sliders/index.js":
 /*!*********************************!*\
   !*** ./src/js/sliders/index.js ***!
@@ -244,6 +296,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Sliders)
 /* harmony export */ });
 /* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services */ "./src/js/sliders/services.js");
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ "./src/js/sliders/home.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -252,30 +305,49 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
+
 var Sliders = /*#__PURE__*/function () {
   function Sliders() {
     _classCallCheck(this, Sliders);
 
-    this.ServiceSlider = new _services__WEBPACK_IMPORTED_MODULE_0__["default"]();
-    this.sliderEvents();
+    if (document.querySelector('.services-page')) {
+      this.serviceSlider = new _services__WEBPACK_IMPORTED_MODULE_0__["default"]();
+      this.servicesSliderEvents();
+    }
+
+    if (document.querySelector('.home-page')) {
+      this.homeSlider = new _home__WEBPACK_IMPORTED_MODULE_1__["default"]();
+      this.homeSliderEvents();
+    }
   }
 
   _createClass(Sliders, [{
-    key: "sliderEvents",
-    value: function sliderEvents() {
+    key: "servicesSliderEvents",
+    value: function servicesSliderEvents() {
       var _this = this;
 
       document.querySelector('.main-slider-1 .slide-next').addEventListener('click', function () {
-        _this.ServiceSlider.slideNext(0);
+        _this.serviceSlider.slideNext(0);
       });
       document.querySelector('.main-slider-2 .slide-next').addEventListener('click', function () {
-        _this.ServiceSlider.slideNext(1);
+        _this.serviceSlider.slideNext(1);
       });
       document.querySelector('.main-slider-3 .slide-next').addEventListener('click', function () {
-        _this.ServiceSlider.slideNext(2);
+        _this.serviceSlider.slideNext(2);
       });
       document.querySelector('.main-slider-4 .slide-next').addEventListener('click', function () {
-        _this.ServiceSlider.slideNext(3);
+        _this.serviceSlider.slideNext(3);
+      });
+    }
+  }, {
+    key: "homeSliderEvents",
+    value: function homeSliderEvents() {
+      var _this2 = this;
+
+      document.querySelector('.our-works .slide-next').addEventListener('click', function () {
+        _this2.homeSlider.slideNext();
+
+        console.log('hey');
       });
     }
   }]);
