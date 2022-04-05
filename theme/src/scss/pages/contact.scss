@@ -1,0 +1,95 @@
+.hero.hero-contact{
+    align-items: initial;
+
+    .hero-container{
+        height:90vh;
+    }
+    h1{
+        margin-top:0;
+    }
+    p{
+        margin-top:1.5rem;
+    }
+    .second-container{
+        background:$primary;
+        max-width:100%;
+        margin:0;
+
+        @extend %form;
+
+        form{
+            margin-top:0;
+            color:#FFF;
+            padding:4rem 1.8rem;
+            padding-bottom:5rem;
+            @include media(">=desktop"){
+                padding:2rem 0rem;
+                max-width:80%;
+            }
+            .form-group{
+                select{
+                    border:1px solid #FFF;
+                    color:#FFF;
+                }
+                textarea,.input{
+                    border-bottom:1px solid #FFF;
+                    color:#FFF;
+
+                    &::placeholder{
+                        opacity:.9;
+                    }
+                }
+            }
+            .submit-btn-container{
+                .submit-btn{
+                    background:#FFF;
+                    color:$primary;
+                }
+            }
+        }
+    }
+
+    .more{
+        display: none;
+    }
+    
+}
+
+.contact-bottom{
+    .contact-bottom-container{
+        @extend %container-width;
+        margin:0 auto;
+        display:flex;
+        flex-direction: column-reverse;
+        @include media(">=desktop"){
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .contact-image{
+            margin-top:4rem;
+            img{
+                display:block;
+            }
+        }
+        .openings{
+            padding:4rem 0;
+            h1{
+                @extend %heading-1;
+            }
+            p{
+                @extend %text-1;
+            } 
+            a{
+           
+                @extend %button-1;
+                text-decoration: none;
+                display:inline-block;
+                margin-top:2rem;
+                @include media(">=desktop"){
+                    margin-top:1rem;
+                }
+            }
+        }
+    }
+}
+
